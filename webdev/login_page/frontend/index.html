@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login page</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="css/login.css" rel="stylesheet">
+  </head>
+  <body>
+
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+
+      <div class="fadeIn first">
+        <img src="https://www.istitutovolterra.edu.it/wp-content/uploads/2021/12/Logo-Volterra-2021-2.jpg" id="logo" alt="logo" />
+      </div>
+
+      <form id="loginForm">
+        <input type="text" id="username" class="fadeIn second" name="username" placeholder="username" required>
+        <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" required>
+        <input type="submit" id="submit" class="fadeIn fourth" value="login">
+      </form>
+
+      <div id="formFooter">
+        <div id="wrongLogin" class="alert alert-danger" role="alert">Wrong username and/or password</div>
+        <p>For technical support or for reporting issues, contact someone (not the admin).</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal fade" id="disclaimer" data-backdrop="static" data-show="true" data-keyboard="false" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Non-Disclosure Agreement</h5>
+        </div>
+        <div class="modal-body">
+          By clicking OK, you agree on the following conditions: <br> <br>
+          <b>[General]</b>
+          <ul>
+            <li>Not sharing your credentials</li>
+          </ul>
+          <b>[Web application]</b>
+          <ul>
+            <li>Not breaking the software</li>
+            <li>Not sharing the software</li>
+          </ul>
+          This software is free of viruses.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-success" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  <script type="module" src="js/auth.js"></script>
+</body>
+</html>
