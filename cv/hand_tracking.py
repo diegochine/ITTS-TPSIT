@@ -52,7 +52,7 @@ if __name__ == "__main__":
     while True:
         _, img = cam.read()
         img = detector.find_hands(img)
-        lmlist, bbox = detector.add_bbox(img)
+        bbox = detector.add_bbox(img)
 
         cur_time = time.time()
         fps = 1 / (cur_time - prev_time)
