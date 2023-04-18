@@ -18,7 +18,7 @@ class HandDetector:
         if self.results.multi_hand_landmarks and draw:  # if hands detected (and want to draw)
             for handLms in self.results.multi_hand_landmarks:  # each hand landmarks is a triple (x, y, z)
                 mp.solutions.drawing_utils.draw_landmarks(img, handLms, mp.solutions.hands.HAND_CONNECTIONS)
-        print(f'Detected {len(self.results.multi_hand_landmarks)} hands')
+        print(f'Detected {len(self.results.multi_hand_landmarks) if self.results.multi_hand_landmarks is not None else 0} hands')
         return img
 
     def add_bbox(self, img, hand=0, draw=True):

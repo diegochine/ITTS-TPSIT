@@ -1,4 +1,3 @@
-from importlib import resources
 from argparse import ArgumentParser, BooleanOptionalAction
 import os
 import cv2 as cv
@@ -45,8 +44,7 @@ if __name__ == '__main__':
     args = get_args()
     # create and load pretrained face classifier
     face_detector = cv.CascadeClassifier()
-    pretrained_path = os.path.join(resources.path(package=cv, resource=''),
-                                   'data\\haarcascade_frontalface_alt.xml')
+    pretrained_path = os.path.join(os.getcwd(), 'cascades', 'haarcascade_frontalface_alt.xml')
     face_detector.load(pretrained_path)
 
     if args['camera']:
@@ -61,4 +59,3 @@ if __name__ == '__main__':
             img = cv.imread(in_path)
             processed = detect_face(img, face_detector)
             cv.imwrite(out_path, processed)
-
